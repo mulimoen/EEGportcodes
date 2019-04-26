@@ -27,6 +27,8 @@ pch.close()
 ```
 A testing program can executed by running portcode.py directly. BrainProducts EEG expects the portcodes to be powers of two, which gives 8 unique signals (1, 2, 4, 8, 16, 32, 64, 128). This will show up as triggers on the EEG recordings.
 
+## Dependencies
+This program requires python3 and [pySerial](https://pythonhosted.org/pyserial/)
 
 ## Technical details
 The program spawns a background thread to read portcodes from the caller (stimulus machine) and send over the wire to the EEG recorder. Using this background thread ensures the stimulus machine does not skip a frame, while the signal will be sent properly.
